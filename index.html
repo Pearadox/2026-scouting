@@ -172,11 +172,11 @@
                         <div class="radioInputBool">
                             <div class="radioOption">
                                 <label class="radioLabel">Center</label>
-                                <input type="radio" name="autoClimbSide" value="Center"/>
+                                <input type="radio" name="autoClimbSide" value="Center" style="left: 0px;"/>
                             </div>
                             <div class="radioOption">
                                 <label class="radioLabel">Side</label>
-                                <input type="radio" name="autoClimbSide" value="Side"/>
+                                <input type="radio" name="autoClimbSide" value="Side" style="left: 0px;"/>
                             </div>
                         </div>
                     </div>
@@ -239,11 +239,11 @@
                         <div class="radioInputBool">
                             <div class="radioOption">
                                 <label class="radioLabel">Yes</label>
-                                <input type="radio" name="droveOverBump" value="True"/>
+                                <input type="radio" name="droveOverBump" value="True" style="left: 0px;"/>
                             </div>
                             <div class="radioOption">
                                 <label class="radioLabel">No</label>
-                                <input type="radio" name="droveOverBump" value="False"/>
+                                <input type="radio" name="droveOverBump" value="False" style="left: 0px;"/>
                             </div>
                         </div>
                     </div>
@@ -318,11 +318,11 @@
                         <div class="radioInputBool">
                             <div class="radioOption">
                                 <label class="radioLabel">Center</label>
-                                <input type="radio" name="matchClimbSide" value="Center"/>
+                                <input type="radio" name="matchClimbSide" value="Center" style="left: 0px;"/>
                             </div>
                             <div class="radioOption">
                                 <label class="radioLabel">Side</label>
-                                <input type="radio" name="matchClimbSide" value="Side"/>
+                                <input type="radio" name="matchClimbSide" value="Side" style="left: 0px;"/>
                             </div>
                         </div>
                     </div>
@@ -389,7 +389,7 @@
                 <input type="text" name="pitScouterName" list="scouterName" placeholder="Full first name and last initial (e.g. Andrew H)" style="width: 350px;">
 
                 <label for="pitTeamNumber">Team Number</label>
-                <input type="text" name="pitTeamNumber">
+                <input type="number" inputmode="numeric" name="pitTeamNumber" list="teamNumbers">
             </div>
 
             <div class="multi-select">
@@ -424,7 +424,7 @@
             </div>
 
             <div class="multi-select">
-                <p class="multiSelectTitle">Does Robot Have Auto Alignment</p>
+                </p>Does Robot Have Auto Alignment</p>
                 <div class="radioInputBool">
                     <input type="checkbox" name="pitAutoAlign">
                 </div>
@@ -1006,7 +1006,7 @@
 
         input[type="text"] {
             font-size: 1rem;
-            width: 300px;
+            width: 250px;
             height: 30px;
             margin: auto;
             outline: none;
@@ -1049,10 +1049,15 @@
             left: 20px;
         }
 
-        input[type="range"] {
+        input[type="range"]{
             width: 60%;
             margin: 0rem auto;
             background: green;
+        }
+
+        .radioBool {
+            width: 25px;
+            height: 25px;
         }
 
         .radio {
@@ -1060,20 +1065,6 @@
             flex-direction: column;
             margin: 1rem auto;
             width: 75%;
-            padding: 2rem 2rem;
-            background: rgba(105, 105, 105, 0.2);
-            border-radius: 16px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .radioBool {
-            display: flex;
-            flex-direction: column;
-            margin: 1rem auto;
-            width: 25%;
             padding: 2rem 2rem;
             background: rgba(105, 105, 105, 0.2);
             border-radius: 16px;
@@ -1112,6 +1103,7 @@
         .multi-select {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             margin: 1rem auto;
             width: 50%;
             padding: 2rem 2rem;
