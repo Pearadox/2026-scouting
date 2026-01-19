@@ -98,6 +98,8 @@
                             <p>Scored Fuel</p>
                             <div id="autoHubNumberStep">
                                 <div class="NumStep" id="NumStep">
+                                    <span id="autoHubFuelNumScoredNegetive5" class="NumStepPlus">-5</span>
+                                    <span id="autoHubFuelNumScoredNegetive1" class="NumStepPlus">-1</span>
                                     <span id="autoHubFuelNumScored" class="NumStepNumber">0</span>
                                     <span id="autoHubFuelNumScored1" class="NumStepPlus">+1</span>
                                     <span id="autoHubFuelNumScored5" class="NumStepPlus">+5</span>
@@ -109,6 +111,8 @@
                             <p>Missed Fuel</p>
                             <div id="autoHubNumberStep">
                                 <div class="NumStep" id="NumStep">
+                                    <span id="autoHubFuelNumMissedNegetive5" class="NumStepPlus">-5</span>
+                                    <span id="autoHubFuelNumMissedNegetive1" class="NumStepPlus">-1</span>
                                     <span id="autoHubFuelNumMissed" class="NumStepNumber">0</span>
                                     <span id="autoHubFuelNumMissed1" class="NumStepPlus">+1</span>
                                     <span id="autoHubFuelNumMissed5" class="NumStepPlus">+5</span>
@@ -187,6 +191,8 @@
                             <p>Scored Fuel</p>
                             <div id="teleHubNumberStep">
                                 <div class="NumStep" id="NumStep">
+                                    <span id="teleHubFuelNumScoredNegetive5" class="NumStepPlus">-5</span>
+                                    <span id="teleHubFuelNumScoredNegetive1" class="NumStepPlus">-1</span>
                                     <span id="teleHubFuelNumScored" class="NumStepNumber">0</span>
                                     <span id="teleHubFuelNumScored1" class="NumStepPlus">+1</span>
                                     <span id="teleHubFuelNumScored5" class="NumStepPlus">+5</span>
@@ -198,6 +204,8 @@
                             <p>Missed Fuel</p>
                             <div id="teleHubNumberStep">
                                 <div class="NumStep" id="NumStep">
+                                    <span id="teleHubFuelNumMissedNegetive5" class="NumStepPlus">-5</span>
+                                    <span id="teleHubFuelNumMissedNegetive1" class="NumStepPlus">-1</span>
                                     <span id="teleHubFuelNumMissed" class="NumStepNumber">0</span>
                                     <span id="teleHubFuelNumMissed1" class="NumStepPlus">+1</span>
                                     <span id="teleHubFuelNumMissed5" class="NumStepPlus">+5</span>
@@ -1322,6 +1330,8 @@
         autoHubFuelNumScored1 = document.getElementById("autoHubFuelNumScored1");
         autoHubFuelNumScored5 = document.getElementById("autoHubFuelNumScored5");
         autoHubFuelNumScored10 = document.getElementById("autoHubFuelNumScored10");
+        autoHubFuelNumScoredNegetive1 = document.getElementById("autoHubFuelNumScoredNegetive1");
+        autoHubFuelNumScoredNegetive5 = document.getElementById("autoHubFuelNumScoredNegetive5");
         let autoHubFuelScoredNumber = 0;
         autoHubFuelNumScored1.addEventListener("click", () => {
             autoHubFuelScoredNumber++;
@@ -1335,13 +1345,23 @@
             autoHubFuelScoredNumber += 10;
             autoHubFuelNumScored.innerText = autoHubFuelScoredNumber;
         });
-
+        autoHubFuelNumScoredNegetive1.addEventListener("click", () => {
+            autoHubFuelScoredNumber -= 1;
+            autoHubFuelNumScored.innerText = autoHubFuelScoredNumber;
+        });
+        autoHubFuelNumScoredNegetive5.addEventListener("click", () => {
+            autoHubFuelScoredNumber -= 5;
+            autoHubFuelNumScored.innerText = autoHubFuelScoredNumber;
+        });
         autoHubFuelNumMissed1 = document.getElementById("autoHubFuelNumMissed1");
         autoHubFuelNumMissed5 = document.getElementById("autoHubFuelNumMissed5");
         autoHubFuelNumMissed10 = document.getElementById("autoHubFuelNumMissed10");
+        autoHubFuelNumMissedNegetive1 = document.getElementById("autoHubFuelNumMissedNegetive1");
+        autoHubFuelNumMissedNegetive5 = document.getElementById("autoHubFuelNumMissedNegetive5");
         let autoHubFuelMissedNumber = 0;
         autoHubFuelNumMissed1.addEventListener("click", () => {
             autoHubFuelMissedNumber++;
+            console.log("pressed 1 missed");
             autoHubFuelNumMissed.innerText = autoHubFuelMissedNumber;
         });
         autoHubFuelNumMissed5.addEventListener("click", () => {
@@ -1352,7 +1372,14 @@
             autoHubFuelMissedNumber += 10;
             autoHubFuelNumMissed.innerText = autoHubFuelMissedNumber;
         });
-
+        autoHubFuelNumMissedNegetive1.addEventListener("click", () => {
+            autoHubFuelMissedNumber -= 1;
+            autoHubFuelNumMissed.innerText = autoHubFuelMissedNumber;
+        });
+        autoHubFuelNumMissedNegetive5.addEventListener("click", () => {
+            autoHubFuelMissedNumber -= 5;
+            autoHubFuelNumMissed.innerText = autoHubFuelMissedNumber;
+        });
         let autoCollectFuelDepot = document.getElementsByName("autoCollectFuelDepot")[0];
         let autoCollectFuelOutpost = document.getElementsByName("autoCollectFuelOutpost")[0];
         let autoCollectFuelNeutralZone = document.getElementsByName("autoCollectFuelNeutralZone")[0];
@@ -1378,6 +1405,8 @@
         teleHubFuelNumScored1 = document.getElementById("teleHubFuelNumScored1");
         teleHubFuelNumScored5 = document.getElementById("teleHubFuelNumScored5");
         teleHubFuelNumScored10 = document.getElementById("teleHubFuelNumScored10");
+        teleHubFuelNumScoredNegetive1 = document.getElementById("teleHubFuelNumScoredNegetive1");
+        teleHubFuelNumScoredNegetive5 = document.getElementById("teleHubFuelNumScoredNegetive5");
         let teleHubFuelScoredNumber = 0;
         teleHubFuelNumScored1.addEventListener("click", () => {
             teleHubFuelScoredNumber++; // needs to be changed
@@ -1391,10 +1420,20 @@
             teleHubFuelScoredNumber += 10;
             teleHubFuelNumScored.innerText = teleHubFuelScoredNumber;
         });
+        teleHubFuelNumScoredNegetive1.addEventListener("click", () => {
+            teleHubFuelScoredNumber -= 1;
+            teleHubFuelNumScored.innerText = teleHubFuelScoredNumber;
+        });
+        teleHubFuelNumScoredNegetive5.addEventListener("click", () => {
+            teleHubFuelScoredNumber -= 5;
+            teleHubFuelNumScored.innerText = teleHubFuelScoredNumber;
+        });
 
         teleHubFuelNumMissed1 = document.getElementById("teleHubFuelNumMissed1");
         teleHubFuelNumMissed5 = document.getElementById("teleHubFuelNumMissed5");
         teleHubFuelNumMissed10 = document.getElementById("teleHubFuelNumMissed10");
+        teleHubFuelNumMissedNegetive1 = document.getElementById("teleHubFuelNumMissedNegetive1");
+        teleHubFuelNumMissedNEgetive5 = document.getElementById("teleHubFuelNumMissedNegetive5");
         let teleHubFuelMissedNumber = 0;
         teleHubFuelNumMissed1.addEventListener("click", () => {
             teleHubFuelMissedNumber++;
@@ -1408,7 +1447,14 @@
             teleHubFuelMissedNumber += 10;
             teleHubFuelNumMissed.innerText = teleHubFuelMissedNumber;
         });
-        
+        teleHubFuelNumMissedNegetive1.addEventListener("click", () => {
+            teleHubFuelMissedNumber -= 1;
+            teleHubFuelNumMissed.innerText = teleHubFuelMissedNumber;
+        });
+        teleHubFuelNumMissedNegetive5.addEventListener("click", () => {
+            teleHubFuelMissedNumber -= 5;
+            teleHubFuelNumMissed.innerText = teleHubFuelMissedNumber;
+        });
         let inactiveIntakeNeutralZone = document.getElementsByName("inactiveIntakeNeutralZone")[0];
         let inactiveIntakeOpponentAllianceZone = document.getElementsByName("inactiveIntakeOpponentAllianceZone")[0];
         let inactivePassNeutralZone = document.getElementsByName("inactivePassNeutralZone")[0];
