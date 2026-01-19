@@ -42,7 +42,7 @@
             async function populateDropdown() {
                 const datalist = document.getElementById('scouterName');
                 try {
-                    const response = await fetch('teammember_names.txt');
+                    const response = await fetch('scouterNames.txt');
                     if (!response.ok) return;
                     const data = await response.text();
                     const optionsArray = data.split(/\r?\n/).map(line => line.trim()).filter(line => line !== '');
@@ -65,8 +65,30 @@
             <input type="number" inputmode="numeric" name="matchTeamNumber" list="teamNumbers">
 
             <datalist id="teamNumbers">
-                <option value="127"><option value="457"><option value="1745"><option value="3240"><option value="3561"><option value="3679"><option value="3743"><option value="3847"><option value="4364"><option value="4717"><option value="5103"><option value="5414"><option value="5572"><option value="5726"><option value="5829"><option value="5892"><option value="5986"><option value="6155"><option value="6243"><option value="6357"><option value="6369"><option value="6901"><option value="7138"><option value="7271"><option value="7503"><option value="7521"><option value="7540"><option value="8019"><option value="8573"><option value="8598"><option value="8610"><option value="8625"><option value="8874"><option value="9034"><option value="9080"><option value="9121"><option value="9140"><option value="9311"><option value="9418"><option value="9448"><option value="9664"><option value="10518">
+                <!-- <option value="127"><option value="457"><option value="1745"><option value="3240"><option value="3561"><option value="3679"><option value="3743"><option value="3847"><option value="4364"><option value="4717"><option value="5103"><option value="5414"><option value="5572"><option value="5726"><option value="5829"><option value="5892"><option value="5986"><option value="6155"><option value="6243"><option value="6357"><option value="6369"><option value="6901"><option value="7138"><option value="7271"><option value="7503"><option value="7521"><option value="7540"><option value="8019"><option value="8573"><option value="8598"><option value="8610"><option value="8625"><option value="8874"><option value="9034"><option value="9080"><option value="9121"><option value="9140"><option value="9311"><option value="9418"><option value="9448"><option value="9664"><option value="10518"> -->
             </datalist>
+            <script>
+            // Function to fetch data and populate the datalist
+            async function populateDropdown() {
+                const datalist = document.getElementById('teamNumbers');
+                try {
+                    const response = await fetch('teamNumbers.txt');
+                    if (!response.ok) return;
+                    const data = await response.text();
+                    const optionsArray = data.split(/\r?\n/).map(line => line.trim()).filter(line => line !== '');
+                    optionsArray.forEach(optionText => {
+                        const option = document.createElement('option');
+                        option.value = optionText;
+                        datalist.appendChild(option);
+                    });
+                } catch (e) {
+                    console.error('Failed to load team member names:', e);
+                }
+            }
+
+            // Call the function when the page loads
+            document.addEventListener('DOMContentLoaded', populateDropdown);
+            </script>
 
             <label for="matchMatchNumber">Match Number</label>
             <input type="number" inputmode="numeric" name="matchMatchNumber">
