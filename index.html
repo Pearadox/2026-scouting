@@ -143,10 +143,12 @@
                         <div id="autoHubFuel">
                             <p>Scored Fuel</p>
                             <div id="autoHubNumberStep">
+                                <span id="autoHubFuelNumScored" class="NumStepNumber">0</span>
+                            </div>
+                            <div id="autoHubNumberStep">
                                 <div class="NumStep" id="NumStep">
                                     <span id="autoHubFuelNumScoredNegetive5" class="NumStepPlus">-5</span>
                                     <span id="autoHubFuelNumScoredNegetive1" class="NumStepPlus">-1</span>
-                                    <span id="autoHubFuelNumScored" class="NumStepNumber">0</span>
                                     <span id="autoHubFuelNumScored1" class="NumStepPlus">+1</span>
                                     <span id="autoHubFuelNumScored5" class="NumStepPlus">+5</span>
                                     <span id="autoHubFuelNumScored10" class="NumStepPlus">+10</span>
@@ -156,10 +158,12 @@
                         <div id="autoHubFuel">
                             <p>Missed Fuel</p>
                             <div id="autoHubNumberStep">
+                                <span id="autoHubFuelNumMissed" class="NumStepNumber">0</span>
+                            </div>
+                            <div id="autoHubNumberStep">
                                 <div class="NumStep" id="NumStep">
                                     <span id="autoHubFuelNumMissedNegetive5" class="NumStepPlus">-5</span>
                                     <span id="autoHubFuelNumMissedNegetive1" class="NumStepPlus">-1</span>
-                                    <span id="autoHubFuelNumMissed" class="NumStepNumber">0</span>
                                     <span id="autoHubFuelNumMissed1" class="NumStepPlus">+1</span>
                                     <span id="autoHubFuelNumMissed5" class="NumStepPlus">+5</span>
                                     <span id="autoHubFuelNumMissed10" class="NumStepPlus">+10</span>
@@ -172,15 +176,22 @@
                     
                     <div class="radio">
                         <p>Collected Fuel From</p>
+                        <div class="radioInput">
+                            <div class="radioOption">
+                                <label class="radioLabel" for="autoCollectedDepot">Depot</label>
+                                <input type="checkbox" name="autoCollectFuelDepot">
+                            </div>
 
-                        <label for="autoCollectedDepot">Depot</label>
-                        <input type="checkbox" name="autoCollectFuelDepot">
-
-                        <label for="autoCollectedOutpost">Outpost</label>
-                        <input type="checkbox" name="autoCollectFuelOutpost">
-
-                        <label for="autoCollectedNeutralZone">Neutral Zone</label>
-                        <input type="checkbox" name="autoCollectFuelNeutralZone">
+                            <div class="radioOption">
+                                <label for="autoCollectedOutpost">Outpost</label>
+                                <input type="checkbox" name="autoCollectFuelOutpost">
+                            </div>
+                            
+                            <div class="radioOption">
+                                <label for="autoCollectedNeutralZone">Neutral Zone</label>
+                                <input type="checkbox" name="autoCollectFuelNeutralZone">
+                            </div>
+                        </div>
                     </div>
 
                     <div class="radio">
@@ -236,10 +247,12 @@
                         <div id="teleHubFuel">
                             <p>Scored Fuel</p>
                             <div id="teleHubNumberStep">
+                                <span id="teleHubFuelNumScored" class="NumStepNumber">0</span>
+                            </div>
+                            <div id="teleHubNumberStep">
                                 <div class="NumStep" id="NumStep">
                                     <span id="teleHubFuelNumScoredNegetive5" class="NumStepPlus">-5</span>
                                     <span id="teleHubFuelNumScoredNegetive1" class="NumStepPlus">-1</span>
-                                    <span id="teleHubFuelNumScored" class="NumStepNumber">0</span>
                                     <span id="teleHubFuelNumScored1" class="NumStepPlus">+1</span>
                                     <span id="teleHubFuelNumScored5" class="NumStepPlus">+5</span>
                                     <span id="teleHubFuelNumScored10" class="NumStepPlus">+10</span>
@@ -249,10 +262,12 @@
                         <div id="teleHubFuel">
                             <p>Missed Fuel</p>
                             <div id="teleHubNumberStep">
+                                <span id="teleHubFuelNumMissed" class="NumStepNumber">0</span>
+                            </div>
+                            <div id="teleHubNumberStep">
                                 <div class="NumStep" id="NumStep">
                                     <span id="teleHubFuelNumMissedNegetive5" class="NumStepPlus">-5</span>
                                     <span id="teleHubFuelNumMissedNegetive1" class="NumStepPlus">-1</span>
-                                    <span id="teleHubFuelNumMissed" class="NumStepNumber">0</span>
                                     <span id="teleHubFuelNumMissed1" class="NumStepPlus">+1</span>
                                     <span id="teleHubFuelNumMissed5" class="NumStepPlus">+5</span>
                                     <span id="teleHubFuelNumMissed10" class="NumStepPlus">+10</span>
@@ -263,21 +278,28 @@
                     
                     <div class="radio">
                         <p>Inactive Period</p>
-
-                        <label for="inactiveIntakeNeutralZone">Intake From Neutral Zone</label>
-                        <input type="checkbox" name="inactiveIntakeNeutralZone">
-
-                        <label for="inactiveIntakeOpponentAllianceZone">Intake from Opponent Alliance Zone</label>
-                        <input type="checkbox" name="inactiveIntakeOpponentAllianceZone">
-
-                        <label for="inactivePassNeutralZone">Pass From Neutral Zone</label>
-                        <input type="checkbox" name="inactivePassNeutralZone">
-
-                        <label for="inactivePassOppenentAllianceZone">Pass From Opponent Alliance Zone</label>
-                        <input type="checkbox" name="inactivePassOpponentAllianceZone">
-
-                        <label for="inactivePushIntoOutpost">Push Into Outpost</label>
-                        <input type="checkbox" name="inactivePushIntoOutpost">
+                        <div class="radioInput">
+                            <div class="radioOption">
+                                <label for="inactiveIntakeNeutralZone">Intake From Neutral Zone</label>
+                                <input type="checkbox" name="inactiveIntakeNeutralZone">
+                            </div>
+                            <div class="radioOption">
+                                <label for="inactiveIntakeOpponentAllianceZone">Intake from Opponent Alliance Zone</label>
+                                <input type="checkbox" name="inactiveIntakeOpponentAllianceZone">
+                            </div>
+                            <div class="radioOption">
+                                <label for="inactivePassNeutralZone">Pass From Neutral Zone</label>
+                                <input type="checkbox" name="inactivePassNeutralZone">
+                            </div>
+                            <div class="radioOption">
+                                <label for="inactivePassOppenentAllianceZone">Pass From Opponent Alliance Zone</label>
+                                <input type="checkbox" name="inactivePassOpponentAllianceZone">
+                            </div>
+                            <div class="radioOption">
+                                <label for="inactivePushIntoOutpost">Push Into Outpost</label>
+                                <input type="checkbox" name="inactivePushIntoOutpost">
+                            </div>
+                        </div>
                     </div>
 
                     <div class="radio">
@@ -296,15 +318,20 @@
 
                     <div class="radio">
                         <p>Intakes From</p>
-
-                        <label for="intakeGround">Ground</label>
-                        <input type="checkbox" name="intakeGround">
-
-                        <label for="intakeOutpost">Outpost</label>
-                        <input type="checkbox" name="intakeOutpost">
-
-                        <label for="intakeDepot">Depot</label>
-                        <input type="checkbox" name="intakeDepot">
+                        <div class="radioInput">
+                            <div class="radioOption">
+                                <label for="intakeGround">Ground</label>
+                                <input type="checkbox" name="intakeGround">
+                            </div>
+                            <div class="radioOption">
+                                <label for="intakeOutpost">Outpost</label>
+                                <input type="checkbox" name="intakeOutpost">
+                            </div>
+                            <div class="radioOption">
+                                <label for="intakeDepot">Depot</label>
+                                <input type="checkbox" name="intakeDepot">
+                            </div>
+                        </div>
                     </div>
 
                 </div> <!-- End Tele-Op Section-->
@@ -971,7 +998,7 @@
         }
 
         #autoHubNumberStep {
-            margin: 0rem 0rem 0rem 4rem;
+            margin: 0rem 0rem 0rem 2rem;
         }
 
         #autoAlgaeNumberStep {
@@ -987,21 +1014,21 @@
         }
 
         #teleHubNumberStep {
-            margin: 0rem 0rem 0rem 4rem;
+            margin: 0rem 0rem 0rem 2rem;
         }
 
         .numberStepperSection {
             display: flex;
             flex-direction: column;
             padding: 2rem 2rem;
-            margin: 0rem 0rem 1rem 0rem;
+            margin: 1rem auto;
             background: rgba(105, 105, 105, 0.2);
             border-radius: 16px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
             border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 15px;    
+            border-radius: 15px;
         }
 
         .numberStepperSection label { 
@@ -1119,6 +1146,20 @@
         .radio {
             display: flex;
             flex-direction: column;
+            margin: 1rem auto;
+            width: 75%;
+            padding: 2rem 2rem;
+            background: rgba(105, 105, 105, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .radioRow {
+            display: flex;
+            flex-direction: row;
             margin: 1rem auto;
             width: 75%;
             padding: 2rem 2rem;
